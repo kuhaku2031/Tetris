@@ -215,6 +215,18 @@ public class Game extends AppCompatActivity {
                 q3.setBackgroundResource(R.drawable.gray);
             }
             loseAlinh();
+            for (int id2: textViewIds){
+                TextView textView2 = findViewById(id); // Obtener la referencia al TextView utilizando su ID
+                String text2 = textView2.getText().toString(); // Obtener el texto del TextView como String
+
+                if ("B24".equals(text2) || "B25".equals(text2) || "B26".equals(text2) || "B27".equals(text2)) {
+                    nextUp=7;
+                }array.removeAll(array);
+                arrayCollectPreviousOne.removeAll(arrayCollectPreviousOne);
+                shape_is = nextUp;
+                next_shape();
+
+            }
         }
 
     }
